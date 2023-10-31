@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>CulturaFit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="css/estiloLogin.css">
+
+
+</head>
+
+<body>
+    <header>
+        <img src="img/banner.png" alt="" style="height: 230px; width: 100% !important;">
+        <nav id="navegacion" class="navbar navbar-expand-sm bg-dark navbar-dark"
+            class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Profesionales</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="registroProfesional.html">Registro de Profesional</a>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Cliente</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="registroCliente.html">Registro cliente</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Foro</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="foro.html">Ver foro Social</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown" style="margin-right: auto !important;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Login</a>
+                            <ul class="dropdown-menu">
+                                <div class="formulariocaja">
+                                    <form method="post" action="" name="vaidrollteam">
+                                        <div class="formtitulo" style="text-align: center;">Login</div>
+                                        <div align="left" class="textoscajas">&#128273; Ingresar usuario</div>
+                                        <input type="text" name="txtusuario" class="cajaentradatexto">
+                                        <div align="left" class="textoscajas">
+                                            &#128274; Ingresar password
+                                        </div>
+                                        <input type="password" name="txtpassword" class="cajaentradatexto">
+                                        <a href="rutinas.html" input type="submit" value="Iniciar sesión" style="width: 200px; padding: 10px;"
+                                            class="botonenviar">Iniciar sesión</a>
+                                        <div align="left" class="af"><a href="#">Recuperar contraseña</a></div>
+                                        <hr>
+                                        <div>¿Necesitas una cuenta? <a href="#">Registrar</a></div>
+                                    </form>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main
+        style="border-color: black;   background: linear-gradient(140deg,#00d4ff  0%,#0564b5  50%,#090979  64%,#110c6b  100%)"
+        ;>
+        <br>
+        <div id="formulario" class=" container">
+            <h2 class="text-center">REGISTRO PROFESIONAL</h2>
+            <form action="/action_page.php">
+                <div class="mb-3 mt-3">
+                    <label for="Nombre" class="form-label">Nombre:</label>
+                    <input type="nombre" class="form-control" id="Nombre" placeholder="Enter name" name="name">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Repetir contraseña:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <br>
+
+                <form action="procesar.php" method="POST" enctype="multipart/form-data">
+                    <label for="archivo">Subir tutulo profesional, Selecciona un archivo:</label>
+                    <input type="file" name="archivo" id="archivo" accept=".pdf, .doc, .jpg, .png"
+                        style="margin: 0px; margin-top: 15px;">
+                    <br>
+                    <input type="submit" value="Subir Archivo" style="margin: 0px; margin-top: 0px;">
+                </form>
+                <br>
+                <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember" style="bottom: 15px;"> Aceptar
+                        terminos y condiciones
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </div>
+        <br>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('#tablita').DataTable();
+        });
+    </script>
+</body>
+</html>

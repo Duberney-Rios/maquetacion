@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>CulturaFit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="css/estiloLogin.css">
+
+
+</head>
+
+<body>
+    <header>
+        <img src="img/banner.png" alt="" style="height: 230px; width: 100% !important;">
+        <nav id="navegacion" class="navbar navbar-expand-sm bg-dark navbar-dark"
+            class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+
+
+
+
+                        <link rel="stylesheet" href="">
+                        <li class="nav-item dropdown" style="margin-right: auto !important;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Login</a>
+                            <ul class="dropdown-menu">
+                                <div class="formulariocaja">
+                                    <form method="post" action="" name="vaidrollteam">
+                                        <div class="formtitulo" style="text-align: center;">Login</div>
+                                        <div align="left" class="textoscajas">&#128273; Ingresar usuario</div>
+                                        <input type="text" name="txtusuario" class="cajaentradatexto">
+                                        <div align="left" class="textoscajas">
+                                            &#128274; Ingresar password
+                                        </div>
+                                        <input type="password" name="txtpassword" class="cajaentradatexto">
+                                        <a href="rutinas.html" input type="submit" value="Iniciar sesión" style="width: 200px; padding: 10px;"
+                                            class="botonenviar">Iniciar sesión</a>
+                                        <div align="left" class="af"><a href="#">Recuperar contraseña</a></div>
+                                        <hr>
+                                        <div>¿Necesitas una cuenta? <a href="registroCliente.html">Registrar</a></div>
+                                    </form>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main
+        style="border-color: black;   background: linear-gradient(140deg,#00d4ff  0%,#0564b5  50%,#090979  64%,#110c6b  100%); height:300px; margin-top: 13px;">
+        <br>
+        <div class="container" style="text-align: center;">
+            <h1>Recuperación de Contraseña</h1>
+            <p>Por favor, ingresa tu dirección de correo electrónico a continuación para restablecer tu contraseña.</p>
+
+            <form action="procesar_recuperacion.php" method="post">
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <button type="submit">Enviar Instrucciones</button>
+            </form>
+
+        </div>
+        <br>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilo para la columna "Rutinas de Entrenamiento" */
+.main-column {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-basis: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilo para las demás columnas debajo */
+.column-block {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 23%; /* Divide el ancho en 4 columnas */
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: center;
+}
+
+/* Estilo específico para la barra de progreso */
+.progress-bar {
+    font-weight: bold;
+}
+
+/* Estilo para el estado "Terminado" */
+.completed {
+    color: #28a745;
+}
+
+/* Estilo para el estado "En Progreso" */
+.in-progress {
+    color: #007bff;
+}
+
+.column-block:hover {
+    background-color: #90b4df; /* Cambia el fondo al pasar el ratón */
+    color: #333; /* Cambia el color del texto al pasar el ratón */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+}

@@ -1,0 +1,44 @@
+/* calendario.css */
+
+ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 1;
+    
+
+}
+
+div{
+    text-align: center;
+    width: 500px;
+    border: 2px solid #ccc;
+
+}
+.first-day{
+    grid-column-start: 7;
+}
+
+.day-name{
+    max-width: 150px;
+    height: 30px;
+}
+.day-name{
+    background: blue;
+    font-weight: bold;
+    text-align: center;
+}
+
+li{
+    text-align: right;
+    border: 1px solid #ccc;
+    padding: auto;
+    max-width: 150px;
+    height: 50px;
+
+}
+
+li:hover {
+    background-color: greenyellow;
+}
+

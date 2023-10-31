@@ -1,0 +1,98 @@
+/* Estilo de bloques de foros */
+main{
+
+    background: linear-gradient(140deg,#00d4ff  0%,#0564b5  50%,#090979  64%,#110c6b  100%);	
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.foro-bloque {
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.foro-encabezado {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.foro-encabezado h2 {
+    font-size: 24px;
+}
+
+.foro-encabezado p {
+    font-style: italic;
+}
+
+.foro-contenido {
+    margin-top: 10px;
+    color: #333;
+}
+
+.foro-interacciones {
+    margin-top: 20px;
+    
+}
+
+#crear-foro {
+    border: 2px solid #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  }
+
+  #crear-foro h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: auto;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
