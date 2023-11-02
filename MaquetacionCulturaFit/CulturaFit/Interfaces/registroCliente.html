@@ -48,14 +48,6 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">Foro</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="foro.html">Ver foro Social</a></li>
-
-                            </ul>
-                        </li>
                         <link rel="stylesheet" href="">
                         <li class="nav-item dropdown" style="margin-right: auto !important;">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
@@ -70,9 +62,10 @@
                                             &#128274; Ingresar password
                                         </div>
                                         <input type="password" name="txtpassword" class="cajaentradatexto">
-                                        <a href="rutinas.html" input type="submit" value="Iniciar sesión" style="width: 200px; padding: 10px;"
-                                            class="botonenviar">Iniciar sesión</a>
-                                        <div align="left" class="af"><a href="#">Recuperar contraseña</a></div>
+                                        <a href="rutinas.html" input type="submit" value="Iniciar sesión"
+                                            style="width: 200px; padding: 10px;" class="botonenviar">Iniciar sesión</a>
+                                        <div align="left" class="af"><a href="recuperacionContrasena.html">Recuperar
+                                                contraseña</a></div>
                                         <hr>
                                         <div>¿Necesitas una cuenta? <a href="#">Registrar</a></div>
                                     </form>
@@ -104,15 +97,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="peso" class="form-label">Peso (kg):</label>
-                    <input type="number" id="peso" name="peso" step="0.01" required>
+                    <input type="number" placeholder="Enter (KG)" id="peso" name="peso" step="0.01" required>
                 </div>
                 <div class="mb-3">
                     <label for="estatura" class="form-label">Estatura (cm):</label>
-                    <input type="number" id="estatura" name "estatura" required>
+                    <input type="number" placeholder="Enter (CM)" id="estatura" name="estatura" required>
                 </div>
                 <div class="mb-3">
                     <label for="Edad" class="form-label">Edad:</label>
-                    <input type="number" id="Edad" name="edades" required>
+                    <input type="number" placeholder="Enter age" id="Edad" name="edades" required>
                 </div>
 
                 <div class="mb-3">
@@ -144,4 +137,5 @@
         });
     </script>
 </body>
+
 </html>
