@@ -10,7 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
         </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estiloLogin.css">
+    <link rel="stylesheet" href="css/regitroCliente.css">
 
 
 </head>
@@ -27,28 +29,22 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav">                            
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">Profesionales</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="registroProfesional.html">Registro de Profesional</a>
-                                </li>
-                                <li><a class="dropdown-item" href="listar.html">Listar profesional </a></li>
-
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">Cliente</a>
+                                data-bs-toggle="dropdown">Registro</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="registroCliente.html">Registro cliente</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Foro</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="foroInicio.html">Foro social</a></li>
 
-                        <link rel="stylesheet" href="">
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown" style="margin-right: auto !important;">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Login</a>
@@ -81,61 +77,83 @@
     </header>
 
     <main
-        style="border-color: black;   background: linear-gradient(140deg,#00d4ff  0%,#0564b5  50%,#090979  64%,#110c6b  100%)"
+        style="border-color: black;   background: linear-gradient(140deg,#00d4ff  0%,#0564b5  50%,#090979  64%,#110c6b  100%); "
         ;>
         <br>
-        <div id="formulario" class=" container">
-            <h2 class="text-center">REGISTRO CLIENTE</h2>
-            <form action="/action_page.php">
-                <div class="mb-3 mt-3">
-                    <label for="Nombre" class="form-label">Nombre:</label>
-                    <input type="nombre" class="form-control" id="Nombre" placeholder="Enter name" name="name">
-                </div>
-                <div class="mb-3 mt-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                </div>
-                <div class="mb-3">
-                    <label for="peso" class="form-label">Peso (kg):</label>
-                    <input type="number" placeholder="Enter (KG)" id="peso" name="peso" step="0.01" required>
-                </div>
-                <div class="mb-3">
-                    <label for="estatura" class="form-label">Estatura (cm):</label>
-                    <input type="number" placeholder="Enter (CM)" id="estatura" name="estatura" required>
-                </div>
-                <div class="mb-3">
-                    <label for="Edad" class="form-label">Edad:</label>
-                    <input type="number" placeholder="Enter age" id="Edad" name="edades" required>
+        <div class="container mt-5">
+            <h2 class="mb-4">Registro</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
 
-                <div class="mb-3">
-                    <label for="pwd" class="form-label">Contraseña:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="correo" name="correo" required>
                 </div>
-                <div class="mb-3">
-                    <label for="pwd" class="form-label">Repetir contraseña:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Repite tu contraseña:</label>
+                    <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                </div>
+                
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rolProfesional" name="rolProfesional"
+                        data-toggle="collapse" data-target="#camposProfesional">
+                    <label class="form-check-label" for="rolProfesional">Marca la opción para registrarse como Profesional</label>
+                </div>
+
+                <div id="camposProfesional" class="collapse">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correoProfesional">Correo Electrónico Profesional:</label>
+                        <input type="email" class="form-control" id="correoProfesional" name="correoProfesional">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contrasena">Repite tu contraseña:</label>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Titulo de Profesional:</p>
+                        <label for="archivo">Subir Archivo:</label>
+                        <input type="file" class="form-control-file" id="archivo" name="archivo">
+                    </div>
+                </div>
+                
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember" style="bottom: 15px;"> Aceptar
+                        
+                        <input class="form-check-input" type="checkbox" name="remember" > Aceptar
                         terminos y condiciones
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="submit" class="btn btn-primary">Registrarse</button><br><br><br><br>
+                
             </form>
         </div>
-        <br>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </main>
-
-    <footer>
-
-    </footer>
-    <script>
-        $(document).ready(function () {
-            $('#tablita').DataTable();
-        });
-    </script>
 </body>
 
 </html>
