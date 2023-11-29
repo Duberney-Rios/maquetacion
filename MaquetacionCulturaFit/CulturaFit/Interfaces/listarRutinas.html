@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>CulturaFit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="css/barra.css">
+    <link rel="stylesheet" href="css/estiloLogin.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" hrel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/7a5d053fc8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="img/banner.png" alt="" style="height: 230px; width: 100% !important;">
+        <nav id="navegacion" class="navbar navbar-expand-sm bg-dark navbar-dark"
+            class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Listar</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="listarCliente.html">Listar Cliente</a></li>
+                                <li><a class="dropdown-item" href="listarProfesional.html">Listar Profesional</a></li>
+                                <li><a class="dropdown-item" href="listarRutinas.html">Listar Rutinas</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Cliente</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="registroCliente.html">Registro cliente</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown" style="margin-right: auto !important;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Login</a>
+                            <ul class="dropdown-menu">
+                                <div class="formulariocaja">
+                                    <form method="post" action="" name="vaidrollteam">
+                                        <div class="formtitulo" style="text-align: center;">Login</div>
+                                        <div align="left" class="textoscajas">&#128273; Ingresar usuario</div>
+                                        <input type="text" name="txtusuario" class="cajaentradatexto">
+                                        <div align="left" class="textoscajas">
+                                            &#128274; Ingresar password
+                                        </div>
+                                        <input type="password" name="txtpassword" class="cajaentradatexto">
+                                        <a href="rutinas.html" input type="submit" value="Iniciar sesión"
+                                            style="width: 200px; padding: 10px;" class="botonenviar">Iniciar sesión</a>
+                                        <div align="left" class="af"><a href="recuperacionContrasena.html">Recuperar
+                                                contraseña</a></div>
+                                        <hr>
+                                        <div>¿Necesitas una cuenta? <a href="#">Registrar</a></div>
+                                    </form>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main
+        style="background: linear-gradient(140deg,#00d4ff  0%,#0564b5  50%,#090979  64%,#110c6b  100%); height: auto;"
+        ;>
+        <div class="container mt-3">
+            <h2>Listar cliente</h2>
+            <table id="tablita" class="table">
+                <thead>
+                    <tr>
+                        <th class="">id_Rutina</th>
+                        <th class="">Categoria</th> <!-- entrenamiento o nutricion -->
+                        <th class="">tipo</th>
+                        <th class="atrib">explicacion</th>
+                        <th class="atrib">dificultad</th>
+                        <th class="atrib">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>678</td>
+                        <td>entrenamiento</td>
+                        <td>sentadillas</td>
+                        <td>tener espalda recta piernas a la anchura de los hombros</td>
+                        <td>media</td>
+                        <td><button type="button" class="btn btn-info btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#myModal">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+
+                            <button type="button" class="btn btn-warning btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#ventanaEditar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+
+                            <button type="button" class="btn btn-danger btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#ventanaEliminar">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+
+
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>456</td>
+                        <td>nutricion</td>
+                        <td>consumo de proteinas</td>
+                        <td>deseable 1.5 gramos x cada kilo de peso corporal</td>
+                        <td>N/A</td>
+                        <td><button type="button" class="btn btn-info btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#myModal">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-warning btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#ventanaEditar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+
+
+                            <button type="button" class="btn btn-danger btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#ventanaEliminar">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>Entrenamiento</td>
+                        <td>flexion de pecho</td>
+                        <td><p>Mantener el peso concentrado sobre las manos. 
+                            Bajar hasta tocar el suelo con el pecho o hasta sentir 
+                            el estiramiento pectoral. Los codos deben estar más o menos pegados al cuerpo según la zona a incidir. Los antebrazos deben estar verticales.</p></td>
+                        <td>exigente</td>
+                        <td><button type="button" class="btn btn-info btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#myModal">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Info</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Modal body..
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#ventanaEditar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <div class="modal" id="ventanaEditar">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Editar</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Modal body..
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-danger btn-separado" data-bs-toggle="modal"
+                                data-bs-target="#ventanaEliminar">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                            <div class="modal" id="ventanaEliminar">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Eliminar</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            Modal body..
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('#tablita').DataTable();
+        });
+    </script>
+</body>
+
+</html>
